@@ -1,0 +1,32 @@
+{
+  "name": "koa-nextjs",
+  "version": "0.0.0",
+  "description": "Use React.js as a template engine in Koa.js with Next.js",
+  "main": "src/index.js",
+  "repository": "https://github.com/tokenfoundry/koa-nextjs.git",
+  "author": "Patricio Lopez J. <lopezjuripatricio@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "lint": "eslint src pages .eslintrc.js",
+    "test": "jest"
+  },
+  "peerDependencies": {
+    "koa": "^2.5.3",
+    "koa-router": "^7.4.0",
+    "next": "^7.0.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "@tokenfoundry/eslint-config": "^1.4.0",
+    "eslint": "^5.7.0",
+    "jest": "^23.6.0",
+    "koa": "^2.5.3",
+    "koa-router": "^7.4.0",
+    "next": "^7.0.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "supertest": "^3.3.0"
+  }
+}
