@@ -2,13 +2,14 @@
   "name": "koa-nextjs",
   "version": "0.0.0",
   "description": "Use React.js as a template engine in Koa.js with Next.js",
-  "main": "src/index.js",
+  "main": "src/server.js",
   "repository": "https://github.com/tokenfoundry/koa-nextjs.git",
   "author": "Patricio Lopez J. <lopezjuripatricio@gmail.com>",
   "license": "MIT",
   "private": false,
   "files": [
-    "src",
+    "src/react.js",
+    "src/server.js",
     "react.js"
   ],
   "scripts": {
