@@ -61,6 +61,7 @@ module.exports = async function render(app, { options = {}, route } = {}) {
   });
 
   app.use(router.routes());
+  app.use(router.allowedMethods());
 
   return app;
 };

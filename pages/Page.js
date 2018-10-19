@@ -1,6 +1,6 @@
 import React from "react";
 
-import { withSSR } from "../src/hola";
+import { withSSR } from "../src/react";
 
 // class Page extends React.Component {
 //   render() {
