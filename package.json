@@ -7,8 +7,12 @@
   "author": "Patricio Lopez J. <lopezjuripatricio@gmail.com>",
   "license": "MIT",
   "private": false,
+  "files": [
+    "src",
+    "react"
+  ],
   "scripts": {
-    "lint": "eslint src pages .eslintrc.js",
+    "lint": "eslint src pages react.js .eslintrc.js",
     "test": "jest"
   },
   "peerDependencies": {
