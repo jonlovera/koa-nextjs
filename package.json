@@ -9,7 +9,7 @@
   "private": false,
   "files": [
     "src",
-    "react"
+    "react.js"
   ],
   "scripts": {
     "lint": "eslint src pages react.js .eslintrc.js",
