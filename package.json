@@ -13,7 +13,7 @@
     "react.js"
   ],
   "scripts": {
-    "lint": "eslint src pages react.js .eslintrc.js",
+    "lint": "eslint example src pages react.js .eslintrc.js",
     "test": "jest"
   },
   "peerDependencies": {
