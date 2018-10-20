@@ -1,6 +1,6 @@
 {
   "name": "koa-nextjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use React.js as a template engine in Koa.js with Next.js",
   "main": "src/server.js",
   "repository": "https://github.com/tokenfoundry/koa-nextjs.git",
