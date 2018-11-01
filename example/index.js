@@ -19,7 +19,7 @@ async function main() {
   router.get("/", async ctx => {
     // Fetch data from database or external sources
     await ctx.render({
-      screen: "Home",
+      page: "Home",
       props: {
         name: "John Appleseed",
         // data: ...,
@@ -29,7 +29,7 @@ async function main() {
 
   router.get("/about", async ctx => {
     await ctx.render({
-      screen: "About",
+      page: "About",
       props: {},
       options: {
         staticMarkup: true, // Send as plain HTML for better performance

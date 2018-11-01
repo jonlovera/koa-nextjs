@@ -30,13 +30,13 @@ it("successfully starts a Koa app", async () => {
   app.use(async ctx => {
     if (ctx.path === "/home") {
       const html = await ctx.render({
-        screen: "Page",
+        page: "Page",
       });
       expect(ctx.body).toEqual(html);
       expect(ctx.body).toContain("<!DOCTYPE html>");
     } else if (ctx.path === "/account") {
       const html = await ctx.render({
-        screen: "Page",
+        page: "Page",
         props: {
           name: "John Appleseed",
         },
@@ -73,7 +73,7 @@ it("successfully starts a Koa app even if it's not async starting", async () => 
 
   app.use(async ctx => {
     const html = await ctx.render({
-      screen: "Page",
+      page: "Page",
     });
     expect(html).toBeNull();
     expect(ctx.body).toEqual(

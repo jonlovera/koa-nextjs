@@ -2,7 +2,7 @@
 
 The main goal of this project is to allow developers to write user interfaces using React and serve them with server-side rendering (SSR) and then re-hydrate it in the browser.
 
-Also enables hot-module replacement (HMR) because it uses Next.js under the screens. It's possible to have full control over the Next.js settings.
+Also enables hot-module replacement (HMR) because it uses Next.js under the scenes. It's possible to have full control over the Next.js settings.
 
 ## Installation
 
@@ -28,7 +28,7 @@ await setupSSR(app);
 
 app.use(async ctx => {
   await ctx.render({
-    screen: "main/Home", // path for a React component in `/pages/main/Home.js`
+    page: "main/Home", // path for a React component in `/pages/main/Home.js`
     props: {
       // only plain (serializable) JS primitives or objects.
       user: { name: "" },
@@ -45,6 +45,7 @@ app.use(async ctx => {
 See [`/example`](./example) for a complete example with [styled-components](https://github.com/styled-components/styled-components):
 
 ```js
+// Server-side code
 const path = require("path");
 const Koa = require("koa");
 const Router = require("koa-router");
@@ -66,7 +67,7 @@ async function main() {
   router.get("/", async ctx => {
     // Fetch data from database or external sources
     await ctx.render({
-      screen: "Home",
+      page: "Home",
       props: {
         name: "John Appleseed",
         // data: ...,
@@ -76,7 +77,7 @@ async function main() {
 
   router.get("/about", async ctx => {
     await ctx.render({
-      screen: "About",
+      page: "About",
       props: {},
       options: {
         staticMarkup: true, // Send as plain HTML for better performance
@@ -93,6 +94,26 @@ main().catch(err => {
   console.error(err); // eslint-disable-line no-console
   process.exit(1);
 });
+```
+
+```js
+// Client-side code
+import React from "react";
+import { withSSR } from "koa-nextjs/react";
+
+const Home = ({ name, ...props }) => (
+  <div {...props}>
+    <h1>Hello</h1>
+    <p>
+      Name: <span>{name}</span>
+    </p>
+    <p>
+      <a href="/about">Go to about</a>
+    </p>
+  </div>
+);
+
+export default withSSR()(Home);
 ```
 
 ## Gotchas

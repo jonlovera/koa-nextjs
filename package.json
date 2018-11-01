@@ -25,13 +25,13 @@
   },
   "devDependencies": {
     "@tokenfoundry/eslint-config": "^1.4.0",
-    "eslint": "^5.7.0",
+    "eslint": "^5.8.0",
     "jest": "^23.6.0",
-    "koa": "^2.5.3",
+    "koa": "^2.6.1",
     "koa-router": "^7.4.0",
     "next": "^7.0.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
     "supertest": "^3.3.0"
   }
 }

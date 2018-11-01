@@ -3,15 +3,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 /**
- * This is custom made to abstract the required SSR extensions of the screen component
+ * This is custom made to abstract the required SSR extensions of the page component
  */
 function withSSR() {
-  return function adapter(ScreenComponent) {
+  return function adapter(PageComponent) {
     // eslint-disable-next-line no-param-reassign
-    ScreenComponent.getInitialProps = function getInitialProps(args) {
+    PageComponent.getInitialProps = function getInitialProps(args) {
       return args.query;
     };
-    return ScreenComponent;
+    return PageComponent;
   };
 }
 
