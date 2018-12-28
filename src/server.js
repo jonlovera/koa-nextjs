@@ -1,13 +1,8 @@
 const assert = require("assert");
-const Koa = require("koa");
 const Router = require("koa-router");
 const nextjs = require("next");
 
 module.exports = async function render(app, { options = {}, route } = {}) {
-  assert(
-    app instanceof Koa,
-    `First argument must be an instance of Koa got: ${typeof app}`,
-  );
   assert(
     options === Object(options),
     `Second argument must be an object, got: ${typeof options}`,
